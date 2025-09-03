@@ -31,5 +31,9 @@ Route::get('/slow-text-2', function () {
     return 'This is slow text response 2';
 });
 
+Route::get('/livewire-test', function () {
+    return view('livewire-test');
+})->name('livewire.test');
+
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
