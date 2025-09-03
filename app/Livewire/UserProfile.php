@@ -13,7 +13,7 @@ class UserProfile extends Component
 
     public function updateName()
     {
-        Context::add('method', 'UserProfile');
+        Context::add('method', 'updateName');
 
         $this->name = 'Test Name Updated';
         $this->message = 'Name updated successfully! Context added for Nightwatch tracking.';
