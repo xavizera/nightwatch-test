@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FailingJobController;
 use Inertia\Inertia;
 
 Route::get('/', function () {
@@ -34,6 +35,8 @@ Route::get('/slow-text-2', function () {
 Route::get('/livewire-test', function () {
     return view('livewire-test');
 })->name('livewire.test');
+
+Route::get('/fail-job', FailingJobController::class);
 
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
