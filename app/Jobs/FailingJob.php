@@ -14,7 +14,9 @@ class FailingJob implements ShouldQueue
 
     public function handle(): void
     {
-        $this->fail(new \Exception('Job failed.'));
+        $e = new \Exception('This job always fails.');
+        report($e);
+        $this->fail($e);
     }
 }
 
